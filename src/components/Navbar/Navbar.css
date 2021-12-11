@@ -1,0 +1,77 @@
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding-left: 1rem;
+}
+.navbar img {
+	width: 30px;
+	height: 30px;
+	object-fit: contain;
+	margin: 3rem 1rem;
+}
+.navbar .navbar-links {
+	background: inherit;
+	display: flex;
+	flex-direction: row;
+	padding: 1.5rem;
+	position: relative;
+	overflow: hidden;
+}
+.navbar .navbar-links::before {
+	content: "";
+	position: absolute;
+	background: url("../../assets/home/background-home-desktop.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	filter: blur(10px);
+	inset: 0;
+	z-index: -2;
+}
+.navbar .navbar-links::after {
+	content: "";
+	position: absolute;
+	background: rgba(255, 255, 255, 0.05);
+	opacity: 0.5;
+	inset: 0;
+	z-index: -1;
+}
+
+.navbar .navbar-links li {
+	list-style: none;
+	color: #fff;
+	padding: 0 1rem;
+}
+.navbar .navbar-links li:nth-of-type(1) {
+	margin-left: 3rem;
+}
+.navbar .navbar-links li:last-of-type {
+	margin-right: 7rem;
+}
+.navbar .navbar-links li span {
+	font-weight: 700;
+	font-size: 1.2rem;
+	color: var(--clr--light);
+}
+.navbar .navbar-links li a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: var(--clr-light);
+	font-size: 1rem;
+	font-weight: 100;
+	margin: 0 1rem;
+}
+
+@media (max-width: 768px) {
+	.navbar .navbar-links::before {
+		background: url("../../assets/home/background-home-tablet.jpg");
+	}
+}
+
+@media (max-width: 576px) {
+	.navbar .navbar-links::before {
+		background: url("../../assets/home/background-home-mobile.jpg");
+	}
+}

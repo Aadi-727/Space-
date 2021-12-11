@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;1,400&display=swap");
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+}
+body {
+	background: url("./assets/home/background-home-desktop.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	font-family: "Lato", sans-serif;
+	height: 100vh;
+	width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Navbar */
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+.navbar img {
+	width: 30px;
+	height: 30px;
+	object-fit: contain;
+	margin: 2rem 1rem;
+}
+.navbar .navbar-links {
+	display: flex;
+	flex-direction: row;
+	margin: 0 10rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar .navbar-links li {
+	list-style: none;
+	color: #fff;
+}
+.navbar .navbar-links li span {
+	font-weight: 700;
+	font-size: 1.2rem;
+	color: var(--clr--light);
+}
+.navbar .navbar-links li a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: var(--clr-light);
+	font-size: 1rem;
+	font-weight: 100;
+	margin: 0 1rem;
+}
+/* --------------------------------------------------- */
+/*? Media queries */
+
+@media (max-width: 768px) {
+	body {
+		background: url("./assets/home/background-home-tablet.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		font-family: "Lato", sans-serif;
+		height: 100vh;
+		width: 100%;
+	}
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (max-width: 576px) {
+	body {
+		background: url("./assets/home/background-home-mobile.jpg");
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
 }

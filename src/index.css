@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;300;400&family=Lato:ital,wght@0,100;0,300;0,700;1,400&display=swap");
+
 :root {
 	--clr-dark: #1d1d1d;
 	--clr-light: #fafafa;
@@ -6,4 +8,8 @@
 	--clr-grey-light: #f5f5f5;
 	--clr-grey-lighter: #fafafa;
 	--dark-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+body {
+	font-family: "Barlow Condensed", sans-serif;
 }
